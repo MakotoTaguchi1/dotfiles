@@ -30,3 +30,8 @@ symbol = "🌱 "
 
 [gcloud]
 disabled = true
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)]($style) '
+style = "bold green"
+disabled = false
