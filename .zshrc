@@ -17,13 +17,8 @@ setopt share_history         # 他のターミナルとヒストリーを共有
 eval "$(starship init zsh)"
 
 # google cloud
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source "/opt/homebrew/share/google-cloud-sdk/path.zsh.inc"
+source "/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc"
 
 # terraform
 alias tf=terraform
@@ -35,3 +30,10 @@ alias k=kubectl
 complete -o default -F __start_kubectl k
 ## krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# proto
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+
+# npm
+export PATH=~/.proto/tools/node/18.20.3/bin:$PATH
