@@ -37,3 +37,7 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 
 # npm
 export PATH=~/.proto/tools/node/18.20.3/bin:$PATH
+
+# godoc
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
